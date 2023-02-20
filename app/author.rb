@@ -1,3 +1,9 @@
+#BDD
+#Author
+#an author is initialized with a name as a string
+#a name cannot change after initialization
+#Author#name returns author's name
+#end
 class author
     attr_accessor :name
     def initialize(name)
@@ -19,5 +25,5 @@ class author
         magazine.map{|magazine| magazine.category}.uniq
     end
 
-    
+
 end

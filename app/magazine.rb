@@ -1,3 +1,12 @@
+#BDD
+#Magazine
+#1. a magazine is initialized with a name as a string and a category as a string
+#2. the name and category can be changed after initialization
+#3.Magazine#name returns the name of the magazine
+#4. Magazine#category returns the category of the magazine 
+#5. Magazine.all returns an array f all magazine instances
+
+#end 
 class magazine
     attr_accessor :name, :category
 
