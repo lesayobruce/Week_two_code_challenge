@@ -1,29 +1,33 @@
 #BDD
-#Author
-#an author is initialized with a name as a string
-#a name cannot change after initialization
-#Author#name returns author's name
+#the article initializes author magazine and title
+#it is initialized with an author as an Author object, a magazine as a Magazine object and a title as a string
+#an article title returns the title of a given article
+#Article.all will return an array of all article instances
+
 #end
-class author
-    attr_accessor :name
+class Author
+    attr_reader :name
+    @@all = []
     def initialize(name)
-        @name = name
+      @name = name
+      @@all << self
     end
-
+    def self.all
+      @@all
+    end
     def articles
-        Article.all.filter{|article| article.author == @name}
+      Article.all.select { |article| article.author == self }
     end
-
-    def magazine
-    article.map{|article| article.magazine}.uniq
+    def magazines
+      articles.map { |article| article.magazine }.uniq
     end
-
     def add_article(magazine, title)
-        Article,new(self, magazine, title)
+      Article.new(self, magazine, title)
     end
     def topic_areas
-        magazine.map{|magazine| magazine.category}.uniq
+      magazines.map { |magazine| magazine.category }.uniq
     end
+  end
 
-
-end
+  author = Author.new("Wakili Timam")
+  puts author.name
