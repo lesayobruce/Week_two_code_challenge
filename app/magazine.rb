@@ -24,6 +24,6 @@ class Magazine
   end
 end
 
-magazine = Magazine.new("motorcycle diary", "motorcycle")
-puts magazine.name # should output "motorcycle diary"
+magazine = Magazine.new("New discoveries in science", "universe affairs")
+puts magazine.name
 puts magazine.category

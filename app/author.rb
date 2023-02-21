@@ -29,5 +29,5 @@ class Author
     end
   end
 
-  author = Author.new("Wakili Timam")
+  author = Author.new("Letim")
   puts author.name

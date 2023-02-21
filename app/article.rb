@@ -37,10 +37,10 @@ class Article
   end
   
   # Creating a sample article object
-  author = Author.new("Wakili Timam")
-  magazine = Magazine.new("Motorcycle Diary")
-  article = Article.new(author, magazine, "New motorbikes")
+  author = Author.new("John Ronald")
+  magazine = Magazine.new("The unveiled astronomy")
+  article = Article.new(author, magazine,"Astronomy")
   
   # Outputting the author and magazine names
-  puts article.author.name # should output "Wakili Timam"
-  puts article.magazine.name # should output "motorcycle diary"
+  puts article.author.name # should output "Letim"
+  puts article.magazine.name # should output "New discoveries in science"
